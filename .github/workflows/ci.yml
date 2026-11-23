@@ -1,9 +1,9 @@
 name: CI
 
-# lib-kdeconnect's own checks, and its crates built for droidtop's two Android ABIs. Each program that uses
-# it is built and tested against the commit here once it does (Droidtop/tracker#867 D2: "each repo's CI
+# mytop-kdeconnect's own checks, and its crates built for droidtop's two Android ABIs. Each program that uses
+# it is built and tested against the commit here once it does (mytop-project/tracker#867 D2: "each repo's CI
 # builds and tests every app that uses it"); droidtop-agent joins in slice 1's wiring
-# (Droidtop/tracker#645). Work lands on main from ci/* branches once this is green.
+# (mytop-project/tracker#645). Work lands on main from ci/* branches once this is green.
 on:
   push:
     branches: [main, "ci/**"]
@@ -103,7 +103,7 @@ jobs:
         run: scripts/interop-kcd.sh "$RUNNER_TEMP/bin/kcd"
 
   # A green main whose version has no tag yet is released: CI tags v<version> on this commit, and that tag
-  # is what programs and the other libraries pin (Droidtop/tracker#867 D2). To release, raise the version
+  # is what programs and the other libraries pin (mytop-project/tracker#867 D2). To release, raise the version
   # in the root Cargo.toml (and the CHANGELOG) in the change that needs it.
   release:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'

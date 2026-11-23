@@ -24,7 +24,7 @@ sleep 3
 (timeout 60 "$KCD" pair --yes > "$W/pair.log" 2>&1 &)
 sleep 1
 echo "to kcd $(date +%s%N)" > "$W/to-kcd.txt"
-"$ROOT/target/debug/examples/peer" --name "lib-kdeconnect CI" --announce "$IP" --pair --ping "hello from lib-kdeconnect" \
+"$ROOT/target/debug/examples/peer" --name "mytop-kdeconnect CI" --announce "$IP" --pair --ping "hello from mytop-kdeconnect" \
   --receive-dir "$W/recv" --send-file "$W/to-kcd.txt" > "$W/peer.log" 2>&1 & PEER=$!
 ok=1
 for _ in $(seq 1 30); do grep -q "^paired with" "$W/peer.log" && break; sleep 1; done

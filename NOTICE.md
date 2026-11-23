@@ -1,6 +1,6 @@
 # Notice
 
-lib-kdeconnect is GPL-3.0-only (see `LICENSE`).
+mytop-kdeconnect is GPL-3.0-only (see `LICENSE`).
 
 It is a Rust port of the KDE Connect protocol core. The protocol rules, constants and checks come from:
 

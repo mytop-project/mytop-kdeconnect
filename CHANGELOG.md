@@ -1,12 +1,12 @@
 # Changelog
 
-All notable changes to lib-kdeconnect. Versions follow [Semantic Versioning](https://semver.org/)
+All notable changes to mytop-kdeconnect. Versions follow [Semantic Versioning](https://semver.org/)
 (0.x releases may change anything).
 
 ## [0.1.1]
 
 ### Added
-- Notifications the other way (Droidtop/tracker#645): this device's own notifications go to paired devices
+- Notifications the other way (mytop-project/tracker#645): this device's own notifications go to paired devices
   (`Service::post_notification`, `cancel_notification`; ops `notification_post`, `notification_cancel`) in the
   packet kdeconnect-android sends (`id`, `appName`, `title`, `text`, `ticker`, `isClearable`, `time`, `silent`).
   The service keeps the ones posted and sends them all when a paired device asks (`request: true`, which the
@@ -19,7 +19,7 @@ All notable changes to lib-kdeconnect. Versions follow [Semantic Versioning](htt
 ### Added
 - `kdeconnect-proto`: KDE Connect protocol version 8 without I/O. Packets (one JSON object a line, read as
   leniently as the official apps), the identity, announcement and connection packets, device id and name
-  rules, the pairing state machine and the verification key both devices show (Droidtop/tracker#645).
+  rules, the pairing state machine and the verification key both devices show (mytop-project/tracker#645).
 - `kdeconnect-link`: the device certificate, UDP discovery, the TCP+TLS link with the official apps' role
   swap and identity re-exchange, certificate pinning, payload streams and the LAN link provider. The
   `peer` example is a command-line device for checking against the official apps.

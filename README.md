@@ -1,12 +1,12 @@
-# lib-kdeconnect
+# mytop-kdeconnect
 
 KDE Connect, implemented as a library: droidtop and Pythia speak the real protocol, so they work with the
 official KDE Connect apps (Android, Plasma, Windows, macOS) and with each other, as both the device that is
-controlled and the one that controls. One of the shared library families of Droidtop/tracker#867: it
+controlled and the one that controls. One of the shared library families of mytop-project/tracker#867: it
 belongs to no program, and each program pins a tagged release. The plan and its slices are on
-Droidtop/tracker#645.
+mytop-project/tracker#645.
 
-Owner, 2026-11-05: "lib-kdeconnect implements explicitly kde-connect as a programmatic module." It knows
+Owner, 2026-11-05: "mytop-kdeconnect implements explicitly kde-connect as a programmatic module." It knows
 nothing about Android, Python or any VPN (#867 D3). Each program implements the traits.
 
 | Crate | Where | Holds |
@@ -142,5 +142,5 @@ A release is a tag `vX.Y.Z`, created by CI on a green `main` whose root `Cargo.t
 tagged. Programs depend on a tag:
 
 ```toml
-kdeconnect-link = { git = "https://github.com/Droidtop/lib-kdeconnect", tag = "v0.1.0" }
+kdeconnect-link = { git = "https://github.com/mytop-project/mytop-kdeconnect", tag = "v0.1.0" }
 ```
